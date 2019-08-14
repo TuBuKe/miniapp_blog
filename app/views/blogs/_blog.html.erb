@@ -1,0 +1,11 @@
+<div class="content">
+  <div class="message-box">
+      <%= blog.text %>
+  </div>
+  <div class="content-buttons">
+    <% if user_signed_in? && current_user.id == blog.user_id %>
+      <li><%= link_to "EDIT", "/blogs/#{blog.id}/edit", class: "link" %></li>
+      <li><%= link_to "DELETE", "/blogs/#{blog.id}", method: :delete , class: "link" %></li>
+    <% end %>
+  </div>
+</div>

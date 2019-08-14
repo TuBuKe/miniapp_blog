@@ -1,0 +1,25 @@
+.contents{
+  background-color: wheat;
+  width: 900px;
+  margin: 0 auto;
+  height: calc(100% - 100px);
+}
+
+.content{
+  background-color: aquamarine;
+  height: 200px;
+  border: black;
+}
+
+.message-box{
+  min-height: 150px;
+  color: #5d627b;
+  background: white;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.content-buttons{
+  height: 50px;
+  display: flex;
+}

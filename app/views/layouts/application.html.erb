@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MiniappBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <div class="title">
+    <%= link_to "Blog", "/", class: "link"%>
+  </div>
+  <ul class = "buttons">
+    <% if user_signed_in? %>
+      <li><%= link_to "SignOut", destroy_user_session_path, method: :delete , class: "link" %></li>
+      <li><%= link_to "New", new_blog_path,  class: "link" %></li>
+    <% else %>
+      <li><%= link_to "SignIn", new_user_session_path,  class: "link"%></li>
+      <li><%= link_to "SignUp", new_user_registration_path,  class: "link" %></li>
+    <% end %>
+  </ul>
+    
+  </div>
+  </header>
+  <%= yield %>
+  </body>
+</html>
